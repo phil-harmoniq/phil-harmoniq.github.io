@@ -5,9 +5,11 @@ date:   2017-09-11 19:06:31 -0400
 categories: blog dotnet
 ---
 
-Some cool tex
+Some cool text
 
-{% highlight C# %}
+{% highlight C# linenos %}
+using Shell.NET;
+
 public class Program
 {
     public static void Main(string[] args)
@@ -27,4 +29,5 @@ public class Program
             .UseStartup<Startup>()
             .Build();
 }
+
 {% endhighlight %}

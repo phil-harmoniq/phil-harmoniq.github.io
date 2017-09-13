@@ -89,28 +89,3 @@
           color: var(--link-hover);
     }
 }
-
-:root {
-    /* Primary palette: Smooth */
-    --eerie-black: rgb(23, 25, 25);
-    --jungle: rgb(28, 35, 33);
-    --onyx: rgb(53, 57, 59);
-    --silver-sand: rgb(179, 192, 199);
-    --platinum: rgb(231, 232, 235);
-    --rich-green: rgb(6, 48, 60);
-    --raspberry: rgb(150, 15, 54);
-    --chocolate: rgb(137, 68, 0);
-    --brown-bean: rgb(60, 30, 0);
-    --army-green: rgb(86, 80, 9);
-    --citrine: rgb(213, 199, 11);
-    --green-cyan: rgb(0, 150, 99);
-    --viridian-green: rgb(5, 160, 153);
-    --cerulean: rgb(0, 164, 213);
-    --sea-blue: rgb(0, 105, 137);
-    --deep-sea-blue: rgb(0, 85, 111);
-    --electric-blue: rgb(5, 81, 160);
-    --imperial-blue: rgb(5, 36, 150);
-    --oxford-blue: rgb(3, 21, 86);
-
-    --main-font: "Ubuntu";
-}

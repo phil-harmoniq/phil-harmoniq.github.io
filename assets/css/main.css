@@ -1,12 +1,12 @@
 body {
     font-family: var(--main-font);
     background-color: var(--jungle);
+    font-size: 15px;
 }
 
 .card {
     border-radius: 0 !important;
-    border: 0;
-    padding-right: 0;
+    border: 0 !important;
 }
 
 .container-fluid {
@@ -14,7 +14,6 @@ body {
     padding-left: 0;  /*idem*/
     margin-right: auto;
     margin-left: auto;
-    
 }
 
 .shadow {
@@ -53,8 +52,12 @@ body {
     font-style: italic;
 }
 
-#error {
-    font-size: 32px;
+#error h1 {
+    font-size: 48px;
+}
+
+#error p {
+    font-size: 24px;
 }
 
 #main-content {

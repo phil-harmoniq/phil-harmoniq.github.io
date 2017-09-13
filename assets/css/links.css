@@ -1,0 +1,44 @@
+a {
+    color: var(--onyx);
+}
+
+/* unvisited link */
+a:link {
+    color: var(--silver-sand);
+}
+
+/* visited link */
+a:visited {
+}
+
+/* mouse over link */
+a:hover {
+}
+
+/* selected link */
+a:active {
+
+}
+
+a.dark-card {
+    color: var(--platinum);
+}
+
+/* unvisited link */
+a:link.dark-card {
+}
+
+/* visited link */
+a:visited.dark-card {
+}
+
+/* mouse over link */
+a:hover.dark-card {
+    color: var(--silver-sand);
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active.dark-card {
+
+}
