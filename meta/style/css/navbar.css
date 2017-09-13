@@ -3,8 +3,8 @@
     --border: var(--jungle);
     --title-color: var(--jungle);
     --text-color: var(--onyx);
-    --link-hover: var(--onyx);
-    --hover-background: var(--silver-sand);
+    --link-hover: var(--silver-sand);
+    --hover-background: var(--platinum);
     --active-hover: var(--platinum);
     --active-background: var(--jungle);
 }
@@ -47,7 +47,7 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: var(--active-hover);
+    color: var(--link-hover);
     background-color: var(--active-background);
 }
 /* Caret */

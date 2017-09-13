@@ -4,6 +4,15 @@
   url: /about/
 - title: Projects
   url: /projects/
+  sublinks:
+    - title: netpkg-tool
+      url: https://phil-harmoniq.github.io/netpkg-tool
+    - title: Shell.NET
+      url: https://github.com/phil-harmoniq/Shell.NET
+    - title: ConsoleColors
+      url: https://github.com/phil-harmoniq/ConsoleColors
+    - title: RogueOneBot
+      url: https://github.com/phil-harmoniq/RogueOneBot
 - title: Blog
   url: /blog/
 - title: Contact
