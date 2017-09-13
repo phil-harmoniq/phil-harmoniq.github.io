@@ -13,6 +13,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
+    color: var(--sea-blue);
 }
 
 /* selected link */
@@ -41,4 +42,36 @@ a:hover.dark-card {
 /* selected link */
 a:active.dark-card {
 
+}
+
+.entry a {
+    color: var(--onyx);
+    text-decoration: underline;
+}
+
+/* unvisited link */
+.entry a:link {
+}
+
+/* visited link */
+.entry a:visited {
+}
+
+/* mouse over link */
+.entry a:hover {
+    color: var(--sea-blue);
+}
+
+/* selected link */
+.entry a:active {
+
+}
+
+.navbar-default .nav .dropdown .dropdown-menu a {
+    color: var(--platinum);
+}
+
+.navbar-default .nav .dropdown .dropdown-menu a:hover {
+    color: var(--onyx);
+    background-color: var(--platinum);
 }

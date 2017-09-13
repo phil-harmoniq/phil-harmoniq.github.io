@@ -24,6 +24,7 @@
     border-color: var(--border);
     border: 0;
 }
+
 /* Title */
 .navbar-default .navbar-brand {
     color: var(--title-color);
@@ -69,6 +70,15 @@
     border-top-color: var(--active-hover);
     border-bottom-color: var(--active-hover);
 }
+
+/* Dropdown*/
+.navbar-default .nav .dropdown .dropdown-menu {
+    border: none;
+    border-radius: 0px;
+    color: var(--platinum);
+    background-color: var(--jungle);
+}
+
 /* Mobile version */
 .navbar-default .navbar-toggle {
     border-color: #DDD;
