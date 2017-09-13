@@ -53,6 +53,10 @@ body {
     font-style: italic;
 }
 
+#error {
+    font-size: 32px;
+}
+
 #main-content {
     padding-top: 50px;
 }
