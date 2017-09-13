@@ -5,7 +5,7 @@ date:   2017-09-11 19:06:31 -0400
 categories: dotnet
 ---
 
-Some cool text
+Some cool tex
 
 {% highlight C# %}
 public class Program

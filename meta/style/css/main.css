@@ -48,6 +48,11 @@ body {
     color: var(--platinum);
 }
 
+.post-time {
+    font-size: 12px;
+    font-style: italic;
+}
+
 #main-content {
     padding-top: 50px;
 }

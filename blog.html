@@ -4,17 +4,19 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="posts container">
-  {% for post in site.posts %}
-    <article class="post well card light-card">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 blog-menu well card light-card">
+      <h2>Blog.NET</h2>
+      <ul>
+        <li><a href="/blog/dotnet/">C#/.NET</a></li>
+        <li><a href="/blog/linux/">Linux</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9 posts">
+      {% for post in site.posts %}
+        {% include post-card.html %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
