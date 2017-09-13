@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog - Linux
+permalink: /blog/linux/
+---
+
+<div class="posts container">
+  {% for post in site.categories.linux %}
+    <article class="post well card light-card">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>

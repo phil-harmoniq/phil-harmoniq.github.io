@@ -2,9 +2,10 @@
 layout: post
 title:  "Some .NET Stuff"
 date:   2017-09-11 19:06:31 -0400
-categories: dotnet stuff
+categories: dotnet
 ---
-# I'm Mr. Meseeks, Look at me
+
+Some cool text
 
 {% highlight C# %}
 public class Program
