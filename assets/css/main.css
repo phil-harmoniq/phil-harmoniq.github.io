@@ -5,8 +5,8 @@ body {
 }
 
 .card {
-    border-radius: 0 !important;
-    border: 0 !important;
+    border-radius: 0px !important;
+    border: 0px !important;
 }
 
 .container-fluid {
@@ -58,6 +58,12 @@ body {
 
 .avatar {
     width: 100%;
+}
+
+.well {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 #error h1 {
