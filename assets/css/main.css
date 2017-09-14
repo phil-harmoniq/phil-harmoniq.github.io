@@ -78,6 +78,10 @@ body {
     padding-top: 65px;
 }
 
+.entry > p img {
+    width: 100%;
+}
+
 :root {
     /* Primary palette: Smooth */
     --eerie-black: rgb(23, 25, 25);
