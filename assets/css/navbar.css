@@ -87,6 +87,17 @@
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #CCC;
 }
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:5px !important;
+    padding-bottom:0 !important;
+    height: 30px;
+}
+
+.navbar {
+    min-height:30px !important;
+}
+
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: var(--title-color);

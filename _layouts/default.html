@@ -14,16 +14,13 @@
   <!-- Top Navbar -->
   {% include navbar.html %}
 
-  <div id="main-content">
+  <div id="main-content" class="container-fluid">
     {{ content }}
   </div>
 
   <!-- Footer Panel -->
-  <div class="container" align="center">
-    {% include footer-icons.html %}
-    <div class="well card dark-card text-center">
-      <p>Copyright (c) 2017 - Phil Hawkins</p>
-    </div>
+  <div class="container">
+    {% include footer.html %}
   </div>
 
 </body>
