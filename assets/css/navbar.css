@@ -1,6 +1,3 @@
-
-
-
 :root {
     --background: var(--platinum);
     --border: var(--jungle);
@@ -75,8 +72,8 @@
 .navbar-default .nav .dropdown .dropdown-menu {
     border: none;
     border-radius: 0px;
-    color: var(--platinum);
-    background-color: var(--jungle);
+    color: var(--jungle);
+    background-color: var(--platinum);
 }
 
 /* Mobile version */

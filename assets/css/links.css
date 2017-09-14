@@ -68,10 +68,10 @@ a:active.dark-card {
 }
 
 .navbar-default .nav .dropdown .dropdown-menu a {
-    color: var(--platinum);
+    color: var(--jungle);
 }
 
 .navbar-default .nav .dropdown .dropdown-menu a:hover {
-    color: var(--onyx);
-    background-color: var(--platinum);
+    color: var(--silver-sand);
+    background-color: var(--jungle);
 }

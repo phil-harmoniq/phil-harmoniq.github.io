@@ -52,6 +52,10 @@ body {
     font-style: italic;
 }
 
+.avatar {
+    width: 100%;
+}
+
 #error h1 {
     font-size: 48px;
 }
