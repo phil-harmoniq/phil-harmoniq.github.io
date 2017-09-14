@@ -67,15 +67,6 @@ a:active.dark-card {
 
 }
 
-.navbar-default .nav .dropdown .dropdown-menu a {
-    color: var(--jungle);
-}
-
-.navbar-default .nav .dropdown .dropdown-menu a:hover {
-    color: var(--silver-sand);
-    background-color: var(--jungle);
-}
-
 /* unvisited link */
 .footer-icon a:link {
     text-decoration: none;

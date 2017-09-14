@@ -4,7 +4,7 @@
     --title-color: var(--jungle);
     --text-color: var(--onyx);
     --link-hover: var(--silver-sand);
-    --hover-background: var(--jungle);
+    --hover-background: var(--onyx);
     --active-hover: var(--platinum);
     --active-background: var(--jungle);
 }
@@ -13,6 +13,50 @@
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.navbar-dark {
+    --background: var(--jungle);
+    --border: var(--platinum);
+    --title-color: var(--platinum);
+    --text-color: var(--silver-sand);
+    --link-hover: var(--onyx);
+    --hover-background: var(--silver-sand);
+    --active-hover: var(--jungle);
+    --active-background: var(--platinum);
+}
+
+.navbar-light {
+    --background: var(--platinum);
+    --border: var(--jungle);
+    --title-color: var(--jungle);
+    --text-color: var(--onyx);
+    --link-hover: var(--silver-sand);
+    --hover-background: var(--onyx);
+    --active-hover: var(--platinum);
+    --active-background: var(--jungle);
+}
+
+.navbar-blue {
+    --background: var(--oxford-blue);
+    --border: var(--platinum);
+    --title-color: var(--platinum);
+    --text-color: var(--silver-sand);
+    --link-hover: var(--onyx);
+    --hover-background: var(--silver-sand);
+    --active-hover: var(--jungle);
+    --active-background: var(--platinum);
+}
+
+.navbar-green {
+    --background: var(--rich-green);
+    --border: var(--platinum);
+    --title-color: var(--platinum);
+    --text-color: var(--silver-sand);
+    --link-hover: var(--onyx);
+    --hover-background: var(--silver-sand);
+    --active-hover: var(--jungle);
+    --active-background: var(--platinum);
 }
 
 /* navbar */
@@ -76,6 +120,15 @@
     background-color: var(--platinum);
 }
 
+.navbar-default .nav .dropdown .dropdown-menu a {
+    color: var(--jungle);
+}
+
+.navbar-default .nav .dropdown .dropdown-menu a:hover {
+    color: var(--silver-sand);
+    background-color: var(--onyx);
+}
+
 /* Mobile version */
 .navbar-default .navbar-toggle {
     border-color: #DDD;
@@ -96,7 +149,7 @@
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: var(--link-hover);
     }
-    
+
     .navbar-nav > li > a, .navbar-brand {
         padding-top:5px !important;
         padding-bottom:0 !important;
