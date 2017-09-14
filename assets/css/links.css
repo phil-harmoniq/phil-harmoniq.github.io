@@ -4,7 +4,7 @@ a {
 
 /* unvisited link */
 a:link {
-    color: var(--silver-sand);
+    color: var(--onyx);
 }
 
 /* visited link */
@@ -74,4 +74,24 @@ a:active.dark-card {
 .navbar-default .nav .dropdown .dropdown-menu a:hover {
     color: var(--silver-sand);
     background-color: var(--jungle);
+}
+
+/* unvisited link */
+.footer-icon a:link {
+    text-decoration: none;
+}
+
+/* visited link */
+.footer-icon a:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.footer-icon a:hover {
+    text-decoration: none;
+}
+
+/* selected link */
+.footer-icon a:active {
+    text-decoration: none;
 }

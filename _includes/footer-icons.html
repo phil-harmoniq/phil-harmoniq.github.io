@@ -1,0 +1,17 @@
+{% if site.footer.github %}
+  <a href="https://github.com/{{ site.footer.github }}">
+    <img src="/assets/images/github.svg" class="footer-icon" hspace="4" />
+  </a>
+{% endif %}
+  
+{% if site.footer.travis %}
+<a href="https://travis-ci.org/{{ site.footer.travis }}">
+  <img src="/assets/images/travis-ci.svg" class="footer-icon" hspace="4" />
+</a>
+{% endif %}
+
+{% if site.footer.linkedin %}
+<a href="https://www.linkedin.com/in/{{ site.footer.linkedin }}">
+  <img src="/assets/images/linked-in.svg" class="footer-icon" hspace="4" />
+</a>
+{% endif %}
