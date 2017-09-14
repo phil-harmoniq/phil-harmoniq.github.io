@@ -1,14 +1,12 @@
 ---
-layout: default
+layout: blog-default
 ---
 
-<div class="container">
-  <article class="post well card light-card shadow">
-    <h1>{{ page.title }}</h1>
-    <p><div class="post-time">{{ page.date | date: "%B %e, %Y" }}</div></p>
+<article class="post well card light-card shadow">
+  <h1>{{ page.title }}</h1>
+  <p><div class="post-time">{{ page.date | date: "%B %e, %Y" }}</div></p>
 
-    <div class="entry">
-      {{ content }}
-    </div>
-  </article>
-</div>
+  <div class="entry">
+    {{ content }}
+  </div>
+</article>
