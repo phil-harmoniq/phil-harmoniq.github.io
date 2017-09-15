@@ -73,6 +73,11 @@ body {
     color: var(--jungle);
 }
 
+.pale-card {
+    background-color: var(--pale-aqua);
+    color: var(--jungle);
+}
+
 .light-card {
     background-color: var(--platinum);
     color: var(--jungle);
@@ -177,15 +182,15 @@ body {
 
 .indi {
     background-color: var(--jungle) !important;
-    border: none !important;
+    border-color: var(--jungle);
+    border: 0px !important;
+    
 }
 .indi:hover {
     background-color: var(--silver-sand) !important;
-    border: none;
 }
 .indi:active {
     background-color: var(--silver-sand) !important;
-    border: 1px;
 }
 
 .extra-pad {
