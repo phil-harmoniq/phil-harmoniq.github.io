@@ -21,8 +21,13 @@ body {
     filter:none !important;
 }
 
+.super-hi-box {
+    z-index: 2;
+    position: relative;
+}
+
 .hi-box {
-    z-index: 999;
+    z-index: 2;
     position: relative;
 }
 
@@ -68,6 +73,11 @@ body {
 
 .purple-card {
     background-color: var(--vs-purple);
+    color: var(--platinum);
+}
+
+.onyx-card {
+    background-color: var(--onyx);
     color: var(--platinum);
 }
 
