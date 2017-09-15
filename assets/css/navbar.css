@@ -7,6 +7,10 @@
     --hover-background: var(--onyx);
     --active-hover: var(--platinum);
     --active-background: var(--jungle);
+    --dropdown-text: var(--jungle);
+    --dropdown-background: var(--platinum);
+    --dropdown-hover-text: var(--platinum);
+    --dropdown-hover-background: var(--onyx);
 }
 
 .navbar {
@@ -116,17 +120,17 @@
 .navbar-default .nav .dropdown .dropdown-menu {
     border: none;
     border-radius: 0px;
-    color: var(--jungle);
-    background-color: var(--platinum);
+    color: var(--dropdown-text);
+    background-color: var(--dropdown-background);
 }
 
 .navbar-default .nav .dropdown .dropdown-menu a {
-    color: var(--jungle);
+    color: var(--dropdown-text);
 }
 
 .navbar-default .nav .dropdown .dropdown-menu a:hover {
-    color: var(--silver-sand);
-    background-color: var(--onyx);
+    color: var(--dropdown-hover-text);
+    background-color: var(--dropdown-hover-background);
 }
 
 /* Mobile version */

@@ -16,6 +16,15 @@ body {
     box-shadow: none;
 }
 
+.hi-box {
+    z-index: 999;
+    position: relative;
+}
+
+.low-box {
+    z-index: -1;
+    position: relative;
+}
 
 .card {
     border-radius: 0px !important;
@@ -29,9 +38,12 @@ body {
 }
 
 .shadow {
-    -webkit-box-shadow: 3px 3px 3px -1px rgba(0,0,0,0.50);
-    -moz-box-shadow: 3px 3px 3px -1px rgba(0,0,0,0.50);
-    box-shadow: 3px 3px 3px -1px rgba(0,0,0,0.50);
+}
+
+.special-shadow {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
 }
 
 .dark-card {
@@ -49,8 +61,18 @@ body {
     color: var(--platinum);
 }
 
+.purple-card {
+    background-color: var(--vs-purple);
+    color: var(--platinum);
+}
+
+.python-card {
+    background-color: var(--python-blue);
+    color: var(--platinum);
+}
+
 .blue-card {
-    background-color: var(--oxford-blue);
+    background-color: var(--midnight-blue);
     color: var(--platinum);
 }
 
@@ -108,8 +130,9 @@ body {
     --jungle: rgb(28, 35, 33);
     --onyx: rgb(53, 57, 59);
     --silver-sand: rgb(179, 192, 199);
-    --platinum: rgb(231, 232, 235);
+    --platinum: #E7E8EB;
     --rich-green: rgb(6, 48, 60);
+    --vs-purple: rgb(104, 38, 121);
     --raspberry: rgb(150, 15, 54);
     --chocolate: rgb(137, 68, 0);
     --brown-bean: rgb(60, 30, 0);
@@ -120,9 +143,11 @@ body {
     --cerulean: rgb(0, 164, 213);
     --sea-blue: rgb(0, 105, 137);
     --deep-sea-blue: rgb(0, 85, 111);
+    --python-blue: rgb(58, 118, 170);
     --electric-blue: rgb(5, 81, 160);
+    --midnight-blue: rgb(4, 57, 94);
     --imperial-blue: rgb(5, 36, 150);
     --oxford-blue: rgb(3, 21, 86);
 
-    --main-font: "Ubuntu";
+    --main-font: "sans";
 }
