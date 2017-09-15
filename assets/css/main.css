@@ -16,6 +16,11 @@ body {
     box-shadow: none;
 }
 
+.carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+    filter:none !important;
+}
+
 .hi-box {
     z-index: 999;
     position: relative;
