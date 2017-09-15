@@ -111,6 +111,10 @@ body {
     padding-top: 50px;
 }
 
+.main-well {
+    height: 512px;
+}
+
 .main-img {
     width: auto;
     height: auto;
