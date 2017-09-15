@@ -6,14 +6,17 @@
         {
             "taskName": "Sass Compile",
             "type": "shell",
-            "command": "sass --watch assets/sass/styles.scss:assets/css/styles.css --style compact",
+            "command": "sass --watch assets/scss/:assets/css --style compact",
             "group": "build"
         },
         {
             "taskName": "Jekyll Serve",
             "type": "shell",
             "command": "jekyll serve",
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
