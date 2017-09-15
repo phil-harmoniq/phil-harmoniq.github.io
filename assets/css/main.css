@@ -5,7 +5,7 @@ body {
     font-size: 15px;
     padding-right: 0px !important;
     padding-left: 0px !important;
-    font-family: "Ubuntu";
+    font-family: var(--main-font);
 }
 
 .well {
@@ -68,6 +68,11 @@ body {
     color: var(--platinum);
 }
 
+.silver-card {
+    background-color: var(--silver-sand);
+    color: var(--jungle);
+}
+
 .light-card {
     background-color: var(--platinum);
     color: var(--jungle);
@@ -76,6 +81,11 @@ body {
 .green-card {
     background-color: var(--rich-green);
     color: var(--platinum);
+}
+
+.cyan-card {
+    background-color: var(--green-cyan);
+    color: var(--jungle);
 }
 
 .purple-card {
@@ -91,6 +101,11 @@ body {
 .python-card {
     background-color: var(--python-blue);
     color: var(--platinum);
+}
+
+.dull-purple-card {
+    background-color: var(--dull-purple);
+    color: var(--jungle);
 }
 
 .blue-card {
@@ -156,13 +171,17 @@ body {
     --jungle: rgb(28, 35, 33);
     --onyx: rgb(53, 57, 59);
     --silver-sand: rgb(179, 192, 199);
-    --platinum: #E7E8EB;
+    --pale-aqua: #BBD5ED;
+    --platinum: rgb(231, 232, 235);
     --rich-green: rgb(6, 48, 60);
+    --dull-purple: rgb(86, 63, 123);
     --vs-purple: rgb(104, 38, 121);
+    --topaz: #932800;
     --raspberry: rgb(150, 15, 54);
     --chocolate: rgb(137, 68, 0);
     --brown-bean: rgb(60, 30, 0);
     --army-green: rgb(86, 80, 9);
+    --gamboge-brown: #936D00;
     --citrine: rgb(213, 199, 11);
     --green-cyan: rgb(0, 150, 99);
     --viridian-green: rgb(5, 160, 153);
@@ -171,9 +190,9 @@ body {
     --deep-sea-blue: rgb(0, 85, 111);
     --python-blue: rgb(58, 118, 170);
     --electric-blue: rgb(5, 81, 160);
-    --midnight-blue: rgb(4, 57, 94);
+    --midnight-blue: #04395E;
     --imperial-blue: rgb(5, 36, 150);
     --oxford-blue: rgb(3, 21, 86);
 
-    --main-font: "sans";
+    --main-font: "Ubuntu";
 }

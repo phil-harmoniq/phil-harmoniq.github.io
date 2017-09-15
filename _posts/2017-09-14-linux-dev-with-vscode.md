@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Devloping on Linux with VS Code"
+title: "Developing on Linux with VS Code"
 date: 2017-09-14 13:12:31 -0400
 categories: blog linux
 ---
