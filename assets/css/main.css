@@ -68,6 +68,19 @@ body {
     color: var(--platinum);
 }
 
+.glyph-style:link {
+    opacity: 1 !important;
+    color: var(--jungle);
+}
+
+.glyph-style:hover {
+    color: var(--silver-sand);
+}
+
+.glyph-style:active {
+    color: var(--silver-sand);
+}
+
 .silver-card {
     background-color: var(--silver-sand);
     color: var(--jungle);
@@ -200,9 +213,9 @@ body {
 :root {
     /* Primary palette: Smooth */
     --eerie-black: rgb(23, 25, 25);
-    --jungle: rgb(28, 35, 33);
-    --onyx: rgb(53, 57, 59);
-    --silver-sand: rgb(179, 192, 199);
+    --jungle: rgba(28, 35, 33, 1);
+    --onyx: rgba(53, 57, 59, 1);
+    --silver-sand: rgba(179, 192, 199, 1);
     --pale-aqua: #BBD5ED;
     --platinum: rgb(231, 232, 235);
     --rich-green: rgb(6, 48, 60);
