@@ -6,7 +6,7 @@
   url: /projects/
   sublinks:
     - title: netpkg-tool
-      url: https://phil-harmoniq.github.io/netpkg-tool
+      url: /netpkg-tool/
     - title: Shell.NET
       url: https://github.com/phil-harmoniq/Shell.NET
     - title: ConsoleColors

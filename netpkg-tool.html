@@ -1,0 +1,133 @@
+---
+layout: light-footer
+title: netpkg-tool
+permalink: /netpkg-tool/
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/netpkg-tool.css">
+
+<!-- Top Jumbotron -->
+<div class="jumbotron card dark-card">
+  <div class="jumbo-background text-center">
+    <div class="container main-title">
+      <h1>Package Your .NET Apps On Linux</h1>
+      <p></p>
+      <img src="/assets/images/netpkg-tool/aspnet-example.png" class="main-img shadow"/> 
+    </div>
+  </div>
+</div>
+
+<!-- Download Section -->
+<div class="container-fluid card light-card special-shadow">
+  <div class="container download">
+    <div class="row row-pad">
+      <div class="col-md-3">
+        <div class="card">
+          <h3>Downloading is easy!</h3>
+          <p>Releases can be downloaded directly from Github. Use the version tag to specify which one.</p>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="code-panel shadow">
+          <p><span prompt=" ~$ "></span>wget https://github.com/phil-harmoniq/netpkg-tool/releases/download/0.3.8/netpkg-tool</p>
+          <p><span prompt=" ~$ "></span>chmod a+x ./netpkg-tool</p>
+          <p><span prompt=" ~$ "></span>./netpkg-tool --help</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-pad">
+      <div class="col-md-3">
+        <div class="card">
+          <h3>If you're feeling adventurous,</h3>
+          <p>you can easily build netpkg-tool from source.</p>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="code-panel shadow">
+          <p><span prompt=" ~$ "></span>git clone https://github.com/phil-harmoniq/netpkg-tool</p>
+          <p><span prompt=" ~$ "></span>cd netpkg-tool && ./build.sh .</p>
+          <p><span prompt=" ~$ "></span>./netpkg-tool --help</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row row-pad">
+      <div class="col-md-3">
+        <div class="card">
+          <h3>Also available as a <a href="https://hub.docker.com/r/philharmoniq/netpkg-tool/">Docker image!</a></h3>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="code-panel shadow">
+          <p><span prompt=" ~$ "></span>docker run --rm philharmoniq/netpkg-tool --help</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Cool VS Code background -->
+<div class="vscode-background low-box vertical-center text-center">
+  <div class="container">
+    <h1><3 100% Open Source <3</h1>
+  </div>
+</div>
+
+<!-- Overview Panel -->
+<div class="container-fluid card light-card special-shadow" id="documentation">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 docs-panel">
+        <div class="card">
+          <h1>Details</h1>
+          <p>Using netpkg-tool will restore and compile your project based on settings in your *.csproj file.
+          By default, netpkg-tool will use 
+          <a href="https://docs.microsoft.com/en-us/dotnet/core/deploying/#framework-dependent-deployments-fdd">
+          Framework Dependent Deployment</a> to compile your project. To use 
+          <a href="https://docs.microsoft.com/en-us/dotnet/core/deploying/#self-contained-deployments-scd">
+          Self-Contained Deployment</a>, use the --scd flag. You aplications will then be packaged up into an 
+          <a href="http://appimage.org/">AppImage</a>. (More package formats to come)</p>
+          <h3><a href="https://github.com/phil-harmoniq/netpkg-tool">
+          Get more info from the Github repo!</a></h3>
+        </div>
+      </div>
+
+      <div class="col-md-8 docs-panel">
+        <img src="/assets/images/netpkg-tool/help-menu.png" width="100%" class="shadow"/>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Source Panel -->
+<div class="container-fluid" id="source">
+  <div class="container docs-panel">
+    <div class="row">
+
+      <div class="col-md-4">
+        <a href="https://github.com/phil-harmoniq/netpkg-tool">
+          <img src="/assets/images/logos/github-white.svg" class="logo-img center-block" />
+        </a>
+      </div>
+      
+      <div class="col-md-4 vertical-center">
+        <div class="container card vertical-center">
+          <h3>If you'd like to dig deeper into the development of netpkg-tool, all of our source
+          is available on Github. You can also see all of our build logs on Travis CI.</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://travis-ci.org/phil-harmoniq/netpkg-tool">
+          <img src="/assets/images/logos/travis-rgb.svg" class="logo-img center-block" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

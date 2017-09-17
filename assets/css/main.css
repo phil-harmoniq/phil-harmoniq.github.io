@@ -213,11 +213,11 @@ body {
 :root {
     /* Primary palette: Smooth */
     --eerie-black: rgb(23, 25, 25);
-    --jungle: rgba(28, 35, 33, 1);
+    --jungle: #1C2321;
     --onyx: rgba(53, 57, 59, 1);
     --silver-sand: rgba(179, 192, 199, 1);
     --pale-aqua: #BBD5ED;
-    --platinum: rgb(231, 232, 235);
+    --platinum: #E7E8EB;
     --rich-green: rgb(6, 48, 60);
     --dull-purple: rgb(86, 63, 123);
     --vs-purple: rgb(104, 38, 121);
