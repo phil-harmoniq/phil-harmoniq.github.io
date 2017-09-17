@@ -210,6 +210,12 @@ body {
     padding-top: 15px;
 }
 
+hr {
+    background-color: var(--jungle) !important;
+    color: var(--jungle) !important;
+    height: 2px !important;
+}
+    
 :root {
     /* Primary palette: Smooth */
     --eerie-black: rgb(23, 25, 25);
