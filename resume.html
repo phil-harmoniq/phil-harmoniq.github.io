@@ -4,111 +4,15 @@ permalink: /resume/
 ---
 
 <div class="about-style">
-  <div class="text-center">
-    <h1>Phil Hawkins - Computer Science Major</h1>
-    <p>
-      <a href="https://phil-harmoniq.github.io/">phil-harmoniq.github.io</a>
-      | 
-      <a href="https://www.linkedin.com/in/phil-hawkins">linkedin.com/in/phil-hawkins</a>
-      | 
-      <a href="mailto@ph-hawkins@outlook.com">ph-hawkins@outlook.com</a>
-      | 
-      Atlanta, GA
-    </p>
-  </div>
+  {% include resume-header.html %}
 
   <hr>
 
-  <div class="row">
+  {% include resume-template.html %}
 
-    <div class="col-md-4">
-      <div class="well">
-        <h2>Education</h2>
-
-        <h3>Georgia State University</h3>
-        <p>B.S. Computer Science</p>
-        <ul>
-          <li>January 2016 - Present</li>
-          <li>3.7 GPA</li>
-          <li>Dean's List</li>
-          <li>Presidents's List</li>
-          <li>STEM Scholar Award 2017</li>
-        </ul>
-
-        <h3>Technical College System of Georgia</h3>
-        <p>General Education Development Diploma</p>
-        <ul>
-          <li>Diploma Recieved January 2010</li>
-        </ul>
-      </div>
-
-      <hr>
-      
-      <div class="well">
-        <h2>Technologies</h2>
-        <ul>
-          <li>C#/.NET Core</li>
-          <li>Python</li>
-          <li>HTML/CSS</li>
-          <li>Linux OS</li>
-          <li>Travis CI Pipelines</li>
-          <li>Bash Scripting</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-md-8">
-
-      <div class="well">
-        <h2>Software Experience</h2>
-
-        <h3><a href="/netpkg-tool/">netpkg-tool</a></h3>
-        <p>
-          A command line utility written in C# for packaging .NET Core applications into Linux binaries.
-          Applications are packaged into the AppImage format for distro-agnostic Linux packaging.
-        </p>
-
-        <h3><a href="https://github.com/phil-harmoniq/Shell.NET">Shell.NET</a></h3>
-        <p>
-          A Nuget library to simplify the process of executing bash commands and storing their result.
-          Shell.NET is .NET Standard 2.0 compliant and compatible with Windows 10 using the Windows Subsystem for Linux.
-        </p>
-
-        <h3><a href="https://github.com/phil-harmoniq/phil-harmoniq.github.io">Personal Jekyll Page</a></h3>
-        <p>
-          My personal page including a links to projects, resume, and development blog. 
-          Written in HTML/CSS and featuring extensive customization of the default Bootstrap template.
-        </p>
-
-        <h3><a href="https://github.com/phil-harmoniq/arc-plus">Arc+</a></h3>
-        <p>
-          A UI theme for VS Code with design elements inspired by the Arc GTK theme and material design. 
-          Three dark color variants and one light variant are available.
-        </p>
-
-        <h3><a href="https://github.com/phil-harmoniq/RogueOneBot">RogueOneBot</a></h3>
-        <p>
-          A joke Reddit bot that monitors Star Wars related subreddits for misspellings of the movie "Rogue One" 
-          and offers a friendly spelling correction for the poster.
-        </p>
-      </div>
-
-      <hr>
-
-      <div class="well">
-        <h2>Work Experience</h2>
-
-        <h3>Jimmy John's: Delivery Driver</h3>
-        <p>October 2014 - August 2017</p>
-
-        <h3>CID Entertainment: Event Staff</h3>
-        <p>March 2013 - July 2014</p>
-        
-        <h3>Locus Promotions: Sound Engineer</h3>
-        <p>April 2013 - December 2015</p>
-      </div>
-  
-    </div>
-
+  <div class="well text-center">
+    <a href="{{ site.baseurl }}/resume-print-bw/" class="btn card dark-card dark-btn" role="button">
+      Print Version
+    </a>
   </div>
 </div>

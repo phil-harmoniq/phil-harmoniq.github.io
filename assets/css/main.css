@@ -136,6 +136,21 @@ body {
     color: var(--platinum);
 }
 
+a.dark-btn {
+    background-color: var(--jungle);
+    color: var(--platinum);
+    text-decoration: none !important;
+}
+
+a:visited.dark-btn {
+    color: var(--platinum);
+}
+
+a:hover.dark-btn{
+    background-color: var(--silver-sand);
+    color: var(--jungle) !important;
+}
+
 .post-time {
     font-size: 12px;
     font-style: italic;

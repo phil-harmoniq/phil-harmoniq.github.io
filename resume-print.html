@@ -1,0 +1,30 @@
+---
+layout: print
+permalink: /resume-print-bw/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - @phil-harmoniq{% if page.title %} - {{ page.title }}{% endif %}</title>
+  
+  {% include assets.html %}
+  {% include orientation.html %}
+  {% include print-assets.html %}
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <div class="about-style">
+    {% include resume-header-print.html %}
+  
+    <hr>
+  
+    {% include resume-template.html %}
+  </div>
+
+</body>
+
+</html>
