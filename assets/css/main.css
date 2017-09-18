@@ -138,12 +138,12 @@ body {
 
 a.dark-btn {
     background-color: var(--jungle);
-    color: var(--platinum);
+    color: var(--platinum) !important;
     text-decoration: none !important;
 }
 
 a:visited.dark-btn {
-    color: var(--platinum);
+    color: var(--platinum) !important;
 }
 
 a:hover.dark-btn{
