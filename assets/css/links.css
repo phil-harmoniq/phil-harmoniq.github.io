@@ -86,3 +86,12 @@ a:active.dark-card {
 .footer-icon a:active {
     text-decoration: none;
 }
+
+
+a.link-underline {
+    text-decoration: underline !important;
+}
+
+a.link-underline:hover {
+    text-decoration: none !important;
+}
