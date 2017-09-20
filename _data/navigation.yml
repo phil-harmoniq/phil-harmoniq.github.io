@@ -15,8 +15,6 @@
       url: https://marketplace.visualstudio.com/items?itemName=ph-hawkins.arc-plus
     - title: RogueOneBot
       url: https://github.com/phil-harmoniq/RogueOneBot
-- title: Dev Blog
-  url: /blog/
 - title: Links
   sublinks:
     - title: LinkedIn
@@ -27,3 +25,5 @@
       url: https://travis-ci.org/phil-harmoniq
     - title: Nuget
       url: https://www.nuget.org/profiles/ph-hawkins
+    - title: Email
+      url: mailto:ph-hawkins@outlook.com

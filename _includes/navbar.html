@@ -17,6 +17,10 @@
               {% for sublink in link.sublinks %}
                 {% if sublink.title == 'separator' %}
                   <li role="separator" class="divider"></li>
+                {% elsif sublink.title == 'Email' %}
+                  <li>
+                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  </li>
                 {% else %}
                   <li>
                     <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
