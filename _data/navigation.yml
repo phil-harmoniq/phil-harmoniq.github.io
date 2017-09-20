@@ -15,7 +15,15 @@
       url: https://marketplace.visualstudio.com/items?itemName=ph-hawkins.arc-plus
     - title: RogueOneBot
       url: https://github.com/phil-harmoniq/RogueOneBot
-- title: Blog
+- title: Dev Blog
   url: /blog/
-- title: Contact
-  url: /contact/
+- title: Links
+  sublinks:
+    - title: LinkedIn
+      url: https://linkedin.com/in/phil-hawkins
+    - title: Github
+      url: https://github.com/phil-harmoniq
+    - title: Travis CI
+      url: https://travis-ci.org/phil-harmoniq
+    - title: Nuget
+      url: https://www.nuget.org/profiles/ph-hawkins
