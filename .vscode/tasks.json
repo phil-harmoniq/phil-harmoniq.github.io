@@ -4,13 +4,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "Sass Compile",
+            "label": "Sass Compile",
             "type": "shell",
             "command": "sass --watch assets/scss/:assets/css --style compact",
             "group": "build"
         },
         {
-            "taskName": "Jekyll Serve",
+            "label": "Jekyll Serve",
             "type": "shell",
             "command": "jekyll serve",
             "group": {
