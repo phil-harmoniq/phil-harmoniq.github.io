@@ -259,6 +259,8 @@ hr {
 
 .readme-fit {
     max-width: 75%;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 :root {
