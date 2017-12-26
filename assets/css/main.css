@@ -198,6 +198,11 @@ a:hover.dark-btn{
     align-items: center;
 }
 
+.jumbotron {
+    padding-top: 70px;
+    padding-bottom: 0px;
+}
+
 .carousel-control .glyphicon,
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
