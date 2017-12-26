@@ -44,8 +44,26 @@
     --active-background: var(--jungle);
 }
 
-.vscode-background {
+.netpkg-vscode-background {
     background-image: url("/assets/images/netpkg-tool/vscode.png");
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 345px; 
+    line-height: 340px;
+
+    -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+.govlib-vscode-background {
+    background-image: url("/assets/images/govlib/vscode.png");
     
     background-repeat: no-repeat;
     background-attachment: fixed;
