@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - Fix ASP.NET Assets in Appimages</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Ubuntu font CDN from Google -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+<!-- Reference Custom CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/links.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Magic fix for switching orientations? -->
+<script>
+    $( document ).ready(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+    });
+    $( window ).resize(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+      else {
+        $('.navbar').addClass('navbar-fixed-top');
+      }
+    });
+  </script>
+</head>
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-dark navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Phil Hawkins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+        
+        
+          <li class="">
+            <a href="/index.html">Home</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="/resume/">Resume</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="/projects/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="/GovLib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/netpkg-tool/">netpkg-tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/Shell.NET">Shell.NET</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/ConsoleColors">ConsoleColors</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ph-hawkins.arc-plus">Arc+</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/RogueOneBot">RogueOneBot</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="https://linkedin.com/in/phil-hawkins">LinkedIn</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq">Github</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://travis-ci.org/phil-harmoniq">Travis CI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://www.nuget.org/profiles/ph-hawkins">Nuget</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="mailto:ph-hawkins@outlook.com">Email</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  <div id="main-content" class="container-fluid light-card">
+    
+  <article class="post container">
+    <div class="well card">
+      <h1>Fix ASP.NET Assets in Appimages</h1>
+      <p><div class="post-time">September 14, 2017</div></p>
+
+      <div class="entry">
+        <p>Bundling your .NET Core applications into AppImages simplifies the distribution of your software on Linux. Ever since Microsoft released version 2.0 of .NET Core, this has become even easier with the introduction of the generic <code class="highlighter-rouge">linux-x64</code> <a href="https://github.com/dotnet/docs/blob/master/docs/core/rid-catalog.md#linux-rids">Runtime IDentifier</a> (RID). This RID replaces the distro-specific RIDs (<code class="highlighter-rouge">ubuntu-16.04-x64</code>, <code class="highlighter-rouge">fedora.24-x64</code>, etc) of previous versions of .NET Core.</p>
+
+<h3 id="shameless-plug-netpkg-tool">Shameless Plug: netpkg-tool</h3>
+
+<p>If you wish to simplify/automate the process of <a href="https://github.com/AppImage/AppImageKit/wiki/Bundling-.NET-Core-apps">bundling .NET Core apps into AppImages</a>, you can use <em>netpkg-tool</em>! Just follow the simple instructions for <a href="https://github.com/phil-harmoniq/netpkg-tool#released-binary">downloading netpkg-tool</a>, and then package your application like so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">netpkg-tool ~/path/to/source ~/path/to/destination</code></pre></figure>
+
+<h3 id="preparing-project">Preparing Project</h3>
+
+<p>When generating a new ASP.NET project, you are presented with the following <code class="highlighter-rouge">Program</code> class:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">BuildWebHost</span><span class="p">(</span><span class="n">args</span><span class="p">).</span><span class="nf">Run</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">IWebHost</span> <span class="nf">BuildWebHost</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">=&gt;</span>
+        <span class="n">WebHost</span><span class="p">.</span><span class="nf">CreateDefaultBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">UseStartup</span><span class="p">&lt;</span><span class="n">Startup</span><span class="p">&gt;()</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>By default, ASP.NET looks for <code class="highlighter-rouge">wwwroot</code> in the current working directory. This works well up until you try to run your webapp from a different working directory (aka inside an AppImage). A work-around would be to detect if the application is being run from an AppImage and set its content root accordingly. If you are using <em>netpkg-tool</em> to build your AppImage, an environment variable is provided for this purpose. Simply check for the existance of <code class="highlighter-rouge">$NET_PKG</code> and set the content root to the assembly’s directory if it is detected:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">assembly</span> <span class="p">=</span> <span class="n">Assembly</span><span class="p">.</span><span class="nf">GetExecutingAssembly</span><span class="p">().</span><span class="n">Location</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="nf">IsNullOrEmpty</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="nf">GetEnvironmentVariable</span><span class="p">(</span><span class="s">"NET_PKG"</span><span class="p">)))</span>
+            <span class="nf">BuildWebHost</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">Directory</span><span class="p">.</span><span class="nf">GetCurrentDirectory</span><span class="p">()).</span><span class="nf">Run</span><span class="p">();</span>
+        <span class="k">else</span>
+            <span class="nf">BuildWebHost</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">Path</span><span class="p">.</span><span class="nf">GetDirectoryName</span><span class="p">(</span><span class="n">assembly</span><span class="p">)).</span><span class="nf">Run</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">IWebHost</span> <span class="nf">BuildWebHost</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">,</span> <span class="kt">string</span> <span class="n">root</span><span class="p">)</span> <span class="p">=&gt;</span>
+        <span class="n">WebHost</span><span class="p">.</span><span class="nf">CreateDefaultBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">UseContentRoot</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">UseStartup</span><span class="p">&lt;</span><span class="n">Startup</span><span class="p">&gt;()</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+      </div>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- Footer Panel -->
+<div class="container-fluid special-shadow super-hi-box">
+    <div class="container">
+    </div>
+  </div>
+<div class="container-fluid dark-card super-hi-box">
+  <div class="container">
+    <div class="row well card footer-card" align="center">
+      
+        <a href="https://github.com/phil-harmoniq">
+          <img src="/assets/images/logos/github-white.svg" class="footer-icon" hspace="4" />
+        </a>
+      
+        
+      
+      <a href="https://travis-ci.org/phil-harmoniq">
+        <img src="/assets/images/logos/travis-ci-white.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      
+      
+      <a href="https://www.linkedin.com/in/phil-hawkins">
+        <img src="/assets/images/logos/linked-in-white.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      <div class="well card footer-card text-center">
+        <p>Copyright (c) 2017 - Phil Hawkins</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

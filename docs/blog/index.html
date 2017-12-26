@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - Dev Blog</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Ubuntu font CDN from Google -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+<!-- Reference Custom CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/links.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Magic fix for switching orientations? -->
+<script>
+    $( document ).ready(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+    });
+    $( window ).resize(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+      else {
+        $('.navbar').addClass('navbar-fixed-top');
+      }
+    });
+  </script>
+</head>
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-dark navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Phil Hawkins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+        
+        
+          <li class="">
+            <a href="/index.html">Home</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="/resume/">Resume</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="/projects/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="/GovLib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/netpkg-tool/">netpkg-tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/Shell.NET">Shell.NET</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/ConsoleColors">ConsoleColors</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ph-hawkins.arc-plus">Arc+</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/RogueOneBot">RogueOneBot</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="https://linkedin.com/in/phil-hawkins">LinkedIn</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq">Github</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://travis-ci.org/phil-harmoniq">Travis CI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://www.nuget.org/profiles/ph-hawkins">Nuget</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="mailto:ph-hawkins@outlook.com">Email</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  <div id="main-content" class="container-fluid dark-card">
+    
+  <div class="container extra-pad">
+    <div class="row">
+      <div class="col-md-3 blog-menu well card light-card light-shadow">
+        <img src="/assets/images/avatar.jpg" class="avatar shadow"/>
+        <p></p>
+        <p>Software engineer and open source enthusiast with experience in object oriented programming, 
+        Linux, and web development technologies.</p>
+      </div>
+      <div class="col-md-9 posts">
+        
+  <article class="post well card light-card light-shadow">
+
+  <h1><a href="/blog/linux/2017/09/14/aspnet-appimage.html">Fix ASP.NET Assets in Appimages</a></h1>
+  <div class="post-time">September 14, 2017</div>
+
+  <p>
+    <div class="entry">
+      <p>Bundling your .NET Core applications into AppImages simplifies the distribution of your software on Linux. Ever since Microsoft released version 2.0 of .NET Core, this has become even easier with the introduction of the generic <code class="highlighter-rouge">linux-x64</code> <a href="https://github.com/dotnet/docs/blob/master/docs/core/rid-catalog.md#linux-rids">Runtime IDentifier</a> (RID). This RID replaces the distro-specific RIDs (<code class="highlighter-rouge">ubuntu-16.04-x64</code>, <code class="highlighter-rouge">fedora.24-x64</code>, etc) of previous versions of .NET Core.</p>
+
+
+    </div>
+  </p>
+
+  <a href="/blog/linux/2017/09/14/aspnet-appimage.html" class="read-more">Read More</a>
+</article>
+
+  <article class="post well card light-card light-shadow">
+
+  <h1><a href="/blog/linux/2017/09/14/linux-dev-with-vscode.html">Developing on Linux with VS Code</a></h1>
+  <div class="post-time">September 14, 2017</div>
+
+  <p>
+    <div class="entry">
+      <p><a href="https://code.visualstudio.com/">VS Code</a> is a very capable and extensible editor text editor developed by Microsoft based off of Github’s <a href="https://atom.io/">Atom</a> editor. For the past year, it has been my editor of choice for nearly any project/language. The plugin ecosystem contains essential tools one would need for almost any type of development.</p>
+
+
+    </div>
+  </p>
+
+  <a href="/blog/linux/2017/09/14/linux-dev-with-vscode.html" class="read-more">Read More</a>
+</article>
+
+
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- Footer Panel -->
+<div class="container-fluid special-shadow super-hi-box">
+    <div class="container">
+    </div>
+  </div>
+<div class="container-fluid dark-card super-hi-box">
+  <div class="container">
+    <div class="row well card footer-card" align="center">
+      
+        <a href="https://github.com/phil-harmoniq">
+          <img src="/assets/images/logos/github-white.svg" class="footer-icon" hspace="4" />
+        </a>
+      
+        
+      
+      <a href="https://travis-ci.org/phil-harmoniq">
+        <img src="/assets/images/logos/travis-ci-white.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      
+      
+      <a href="https://www.linkedin.com/in/phil-hawkins">
+        <img src="/assets/images/logos/linked-in-white.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      <div class="well card footer-card text-center">
+        <p>Copyright (c) 2017 - Phil Hawkins</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

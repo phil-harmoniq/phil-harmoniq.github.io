@@ -1,0 +1,59 @@
+---
+layout: light-footer
+title: GovLib
+permalink: /GovLib/
+redirect_from:
+  - /govlib/
+  - /GovLib/
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/inverse.css">
+
+<!-- Top Jumbotron -->
+<div class="jumbotron card dark-card">
+  <div class="jumbo-background text-center">
+    <div class="container main-title">
+      <h1>Access US Government Data in .NET</h1>
+      <p style="font-size: 1000%"><img style="height: 400px" src="/assets/images/logos/csharp-white.svg" /> => {<img style="height: 400px" src="/assets/images/govlib/icon.svg" />}</p>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Overview Panel -->
+<div class="container-fluid card light-card special-shadow" id="documentation">
+  <div class="container readme-fit">
+    <div class="row image-fit">
+      {% capture my_include %}{% remote_include https://raw.githubusercontent.com/phil-harmoniq/GovLib/master/README.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    </div>
+  </div>
+</div>
+
+<!-- Source Panel -->
+<div class="container-fluid" id="source">
+  <div class="container docs-panel">
+    <div class="row">
+
+      <div class="col-md-4">
+        <a href="https://github.com/phil-harmoniq/GovLib">
+          <img src="/assets/images/logos/github-white.svg" class="logo-img center-block" />
+        </a>
+      </div>
+      
+      <div class="col-md-4 vertical-center">
+        <div class="container card vertical-center">
+          <h3>If you'd like to dig deeper into the development of GovLib, all of our source
+          is available on Github. You can also see all of our build logs on Travis CI.</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://travis-ci.org/phil-harmoniq/GovLib">
+          <img src="/assets/images/logos/travis-rgb.svg" class="logo-img center-block" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
