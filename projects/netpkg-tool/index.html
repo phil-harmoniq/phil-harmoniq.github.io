@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - netpkg-tool</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Ubuntu font CDN from Google -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+<!-- Reference Custom CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/links.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Magic fix for switching orientations? -->
+<script>
+    $( document ).ready(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+    });
+    $( window ).resize(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+      else {
+        $('.navbar').addClass('navbar-fixed-top');
+      }
+    });
+  </script>
+</head>
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-dark navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Phil Hawkins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+        
+        
+          <li class="">
+            <a href="/index.html">Home</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="/resume/">Resume</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown active">
+            <a href="/projects/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="/projects/GovLib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/cliappbuilder/">CliAppBuilder</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/netpkg-tool/">netpkg-tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/shell.net/">Shell.NET</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq/ConsoleColors">ConsoleColors</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/arc-plus/">Arc+</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="https://linkedin.com/in/phil-hawkins">LinkedIn</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq">Github</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://travis-ci.org/phil-harmoniq">Travis CI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://www.nuget.org/profiles/ph-hawkins">Nuget</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="mailto:ph-hawkins@outlook.com">Email</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  <link rel="stylesheet" href="/assets/css/inverse.css">
+
+<!-- Top Jumbotron -->
+<div class="jumbotron card dark-card">
+  <div class="jumbo-background text-center">
+    <div class="container main-title">
+      <h1>Package Your .NET Apps On Linux</h1>
+      <p></p>
+      <img src="/assets/images/netpkg-tool/aspnet-example.png" class="main-img shadow"/> 
+    </div>
+  </div>
+</div>
+
+<!-- Overview Panel -->
+<div class="container-fluid card light-card special-shadow" id="documentation">
+  <div class="container readme-fit">
+    <div class="row image-fit">
+      
+      <h1 id="govlib--">GovLib <a href="https://travis-ci.org/phil-harmoniq/GovLib"><img src="https://travis-ci.org/phil-harmoniq/GovLib.svg?branch=master" alt="Build Status" /></a> <a href="https://www.nuget.org/packages/GovLib"><img src="https://img.shields.io/nuget/v/GovLib.svg" alt="NuGet" /></a></h1>
+
+<p>GovLib is a .NET Standard library that provides intuitive access to various government-related APIs. Currently only the <a href="https://www.propublica.org/datastore/api/propublica-congress-api">ProPublica Congress API</a> is available, but more modules are planned. Project under heavy development and may be subject to change.</p>
+
+<p><a href="https://www.propublica.org/datastore/api/propublica-congress-api"><strong>Don’t forget to request a ProPublica API key. It’s free!</strong></a></p>
+
+<h2 id="installing">Installing</h2>
+
+<p>Install using the .NET CLI (explicit version is required in pre-releases):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package GovLib <span class="nt">--version</span> 0.1.1-alpha
+</code></pre></div></div>
+
+<p>Install by adding the NuGet package reference to your <code class="highlighter-rouge">.csproj</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ItemGroup&gt;</span>
+  <span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">"GovLib"</span> <span class="na">Version=</span><span class="s">"0.1.1-alpha"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ItemGroup&gt;</span>
+</code></pre></div></div>
+
+<h2 id="usage-guide">Usage guide</h2>
+
+<p>Add a <code class="highlighter-rouge">using</code> reference:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">GovLib.ProPublica</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Instantiate the congress module using an API key string:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">congress</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Congress</span><span class="p">(</span><span class="n">apiKey</span><span class="p">);</span>
+
+<span class="c1">// A few of the API calls available in the Members module</span>
+<span class="kt">var</span> <span class="n">reps</span> <span class="p">=</span> <span class="n">congress</span><span class="p">.</span><span class="n">Members</span><span class="p">.</span><span class="nf">GetAllRepresentatives</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">sens</span> <span class="p">=</span> <span class="n">congress</span><span class="p">.</span><span class="n">Members</span><span class="p">.</span><span class="nf">GetSenatorsByState</span><span class="p">(</span><span class="n">State</span><span class="p">.</span><span class="n">Colorado</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">newMembers</span> <span class="p">=</span> <span class="n">congress</span><span class="p">.</span><span class="n">Members</span><span class="p">.</span><span class="nf">GetNewMembers</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>PRs are always welcome! The ProPublica tests require your ProPublica key to be stored in an environment variable named <code class="highlighter-rouge">PROPUBLICA_API_KEY</code>. This is not required when consuming/modifying the library, only for testing purposes.</p>
+
+<p>It is recommended you use VS Code to work with the GovLib source code. The workspace includes build tasks, editor settings, extension recommendations, and launch configurations to aid development in VS Code, but any editor that supports C# will do.</p>
+
+<p>Type <code class="highlighter-rouge">Ctrl + Shift + B</code> (or <code class="highlighter-rouge">Cmd + Shift + B</code> on Macs) to bring up the build tasks menu:</p>
+
+<p><img src="https://imgur.com/A70An26.jpg" alt="Tasks Menu" /></p>
+
+<h2 id="supporting-links">Supporting Links</h2>
+
+<ul>
+  <li><a href="https://www.propublica.org/datastore/api/propublica-congress-api">Request an API key from ProPublica</a></li>
+  <li>More details can be found in the <a href="https://projects.propublica.org/api-docs/congress-api">ProPublica API guide</a></li>
+  <li>Icon made by <a href="http://www.freepik.com">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Source Panel -->
+<div class="container-fluid" id="source">
+  <div class="container docs-panel">
+    <div class="row">
+
+      <div class="col-md-4">
+        <a href="https://github.com/phil-harmoniq/netpkg-tool">
+          <img src="/assets/images/logos/github-white.svg" class="logo-img center-block" />
+        </a>
+      </div>
+      
+      <div class="col-md-4 vertical-center">
+        <div class="container card vertical-center">
+          <h3>If you'd like to dig deeper into the development of netpkg-tool, all of our source
+          is available on Github. You can also see all of our build logs on Travis CI.</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://travis-ci.org/phil-harmoniq/netpkg-tool">
+          <img src="/assets/images/logos/travis-rgb.svg" class="logo-img center-block" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer Panel -->
+<div class="container-fluid special-shadow super-hi-box">
+    <div class="container">
+    </div>
+  </div>
+<div class="container-fluid light-card super-hi-box">
+  <div class="container">
+    <div class="row well card footer-card" align="center">
+      
+        <a href="https://github.com/phil-harmoniq">
+          <img src="/assets/images/logos/github-black.svg" class="footer-icon" hspace="4" />
+        </a>
+      
+        
+      
+      <a href="https://travis-ci.org/phil-harmoniq">
+        <img src="/assets/images/logos/travis-ci-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      
+      
+      <a href="https://www.linkedin.com/in/phil-hawkins">
+        <img src="/assets/images/logos/linked-in-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      <div class="well card footer-card text-center">
+        <p>Copyright (c) 2017 - Phil Hawkins</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
