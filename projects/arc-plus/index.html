@@ -1,11 +1,264 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <meta charset="utf-8">
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="http://localhost:4000/projects/arc-plus/">
-  <meta http-equiv="refresh" content="0; url=http://localhost:4000/projects/arc-plus/">
-  <meta name="robots" content="noindex">
-  <h1>Redirecting&hellip;</h1>
-  <a href="http://localhost:4000/projects/arc-plus/">Click here if you are not redirected.</a>
-  <script>location="http://localhost:4000/projects/arc-plus/"</script>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - arc-plus</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Ubuntu font CDN from Google -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+<!-- Reference Custom CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/links.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Magic fix for switching orientations? -->
+<script>
+    $( document ).ready(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+    });
+    $( window ).resize(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+      else {
+        $('.navbar').addClass('navbar-fixed-top');
+      }
+    });
+  </script>
+</head>
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-dark navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Phil Hawkins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+        
+        
+          <li class="">
+            <a href="/index.html">Home</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="/resume/">Resume</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown active">
+            <a href="/projects/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="/projects/govlib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/cliappbuilder/">CliAppBuilder</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/netpkg-tool/">netpkg-tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/shell.net/">Shell.NET</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/arc-plus/">Arc+</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq">Github</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://linkedin.com/in/phil-hawkins">LinkedIn</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://travis-ci.org/phil-harmoniq">Travis CI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://www.nuget.org/profiles/ph-hawkins">Nuget</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="mailto:ph-hawkins@outlook.com">Email</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  <link rel="stylesheet" href="/assets/css/inverse.css">
+
+<!-- Top Jumbotron -->
+<div class="jumbotron card dark-card">
+  <div class="jumbo-background text-center">
+    <div class="container main-title">
+      <h1>Simple CLI app creation for .NET Core</h1>
+      <br/><br/>
+      <p style="font-size: 1000%"><img style="height: 350px" src="/assets/images/logos/shell-white.svg" /></p>
+      <br/>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Overview Panel -->
+<div class="container-fluid card light-card special-shadow" id="documentation">
+  <div class="container readme-fit">
+    <div class="row image-fit">
+      
+      <h1 id="arc-">Arc+ <a href="https://marketplace.visualstudio.com/items?itemName=ph-hawkins.arc-plus"><img src="https://vsmarketplacebadge.apphb.com/version-short/ph-hawkins.arc-plus.svg" alt="Marketplace" /></a></h1>
+
+<p><strong>New and improved style!</strong></p>
+
+<p>Arc+ is a UI theme based on the <a href="https://github.com/horst3180/arc-theme">Arc GTK theme</a> while also retaining some elements of the default VS Code theme. Light and dark variants are available.</p>
+
+<p><img src="https://i.lensdump.com/i/oqdNC.png" alt="Dark Theme Example" />
+<img src="https://i.lensdump.com/i/oq93v.png" alt="Dark Theme Debug Example" /></p>
+
+<p>Light theme:</p>
+
+<p><img src="https://i.lensdump.com/i/oqBW5.png" alt="Light Theme Example" />
+<img src="https://i.lensdump.com/i/oqm9z.png" alt="Light Theme Debug Example" /></p>
+
+<p>(Screenshots are using the <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme">Material Icon Theme</a>)</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Source Panel -->
+<div class="container-fluid" id="source">
+  <div class="container docs-panel">
+    <div class="row">
+
+      <div class="col-md-4">
+        <a href="https://github.com/phil-harmoniq/arc-plus">
+          <img src="/assets/images/logos/github-white.svg" class="logo-img center-block" />
+        </a>
+      </div>
+      
+      <div class="col-md-4 vertical-center">
+        <div class="container card vertical-center">
+          <h3>If you'd like to dig deeper into the development of arc-plus, all of our source
+          is available on Github. You can also see all of our build logs on Travis CI.</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://travis-ci.org/phil-harmoniq/arc-plus">
+          <img src="/assets/images/logos/travis-rgb.svg" class="logo-img center-block" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer Panel -->
+<div class="container-fluid special-shadow super-hi-box">
+    <div class="container">
+    </div>
+  </div>
+<div class="container-fluid light-card super-hi-box">
+  <div class="container">
+    <div class="row well card footer-card" align="center">
+      
+        <a href="https://github.com/phil-harmoniq">
+          <img src="/assets/images/logos/github-black.svg" class="footer-icon" hspace="4" />
+        </a>
+      
+        
+      
+      <a href="https://travis-ci.org/phil-harmoniq">
+        <img src="/assets/images/logos/travis-ci-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      
+      
+      <a href="https://www.linkedin.com/in/phil-hawkins">
+        <img src="/assets/images/logos/linked-in-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      <div class="well card footer-card text-center">
+        <p>Copyright (c) 2017 - Phil Hawkins</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
 </html>
