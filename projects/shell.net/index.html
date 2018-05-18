@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Phil Hawkins - Shell.NET</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Ubuntu font CDN from Google -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+<!-- Reference Custom CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/links.css">
+<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Magic fix for switching orientations? -->
+<script>
+    $( document ).ready(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+    });
+    $( window ).resize(function() {
+      var width = $(window).width(),
+        height = $(window).height();
+      if ((width <= 768)) {
+        $('.navbar').removeClass('navbar-fixed-top');
+      }
+      else {
+        $('.navbar').addClass('navbar-fixed-top');
+      }
+    });
+  </script>
+</head>
+</head>
+
+<!-- Scrollpy body -->
+<body class="main-background">
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-dark navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Phil Hawkins</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+        
+        
+          <li class="">
+            <a href="/index.html">Home</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="/resume/">Resume</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown active">
+            <a href="/projects/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="/projects/govlib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/cliappbuilder/">CliAppBuilder</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/netpkg-tool/">netpkg-tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/shell.net/">Shell.NET</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/arc-plus/">Arc+</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="dropdown ">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Links <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+                  <li>
+                    <a href="https://github.com/phil-harmoniq">Github</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://linkedin.com/in/phil-hawkins">LinkedIn</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://travis-ci.org/phil-harmoniq">Travis CI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://www.nuget.org/profiles/ph-hawkins">Nuget</a>
+                  </li>
+                
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+          <li class="">
+            <a href="mailto:ph-hawkins@outlook.com">Email</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+  <link rel="stylesheet" href="/assets/css/inverse.css">
+
+<!-- Top Jumbotron -->
+<div class="jumbotron card dark-card">
+  <div class="jumbo-background text-center">
+    <div class="container main-title">
+      <h1>Access US Government Data in .NET</h1>
+      <p style="font-size: 1000%"><img style="height: 400px" src="https://i.imgur.com/YdSh0xF.png" /></p>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Overview Panel -->
+<div class="container-fluid card light-card special-shadow" id="documentation">
+  <div class="container readme-fit">
+    <div class="row image-fit">
+      
+      <h1 id="shellnet---">Shell.NET  <a href="https://www.nuget.org/packages/Shell.NET/"><img src="https://img.shields.io/nuget/v/Shell.NET.svg" alt="NuGet" /></a> <a href="https://travis-ci.org/phil-harmoniq/Shell.NET"><img src="https://travis-ci.org/phil-harmoniq/Shell.NET.svg?branch=master" alt="Build Status" /></a></h1>
+
+<p><strong>Now Windows compatible using the <a href="https://msdn.microsoft.com/commandline/wsl/about">Linux Subsystem</a></strong></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Use the .NET CLI to get this library! Prereleases need an explicit version.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package Shell.NET
+</code></pre></div></div>
+
+<p>Or add the following to your .csproj:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ItemGroup&gt;</span>
+  <span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">"Shell.NET"</span> <span class="na">Version=</span><span class="s">"0.2.2"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/ItemGroup&gt;</span>
+</code></pre></div></div>
+
+<h2 id="example">Example</h2>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">bash</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Bash</span><span class="p">();</span>
+<span class="n">bash</span><span class="p">.</span><span class="nf">Grep</span><span class="p">(</span><span class="s">"export"</span><span class="p">,</span> <span class="s">"~/.bashrc"</span><span class="p">,</span> <span class="n">redirect</span><span class="p">:</span> <span class="k">false</span><span class="p">);</span>
+
+<span class="c1">// Commands return a BashResult that stores output information:</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">bash</span><span class="p">.</span><span class="nf">Rm</span><span class="p">(</span><span class="s">"~/Desktop/bashrc-backup"</span><span class="p">).</span><span class="n">ExitCode</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Success!"</span><span class="p">);</span>
+
+<span class="c1">// With redirect (default in most commands), access the command's output from BashResult.Output:</span>
+<span class="kt">var</span> <span class="n">bashrc</span> <span class="p">=</span> <span class="n">bash</span><span class="p">.</span><span class="nf">Cat</span><span class="p">(</span><span class="s">"~/.bashrc"</span><span class="p">).</span><span class="n">Output</span><span class="p">;</span>
+
+<span class="c1">// Without redirect, the command's output gets printed to the terminal:</span>
+<span class="n">bash</span><span class="p">.</span><span class="nf">Cat</span><span class="p">(</span><span class="s">"~/.bashrc"</span><span class="p">,</span> <span class="n">redirect</span><span class="p">:</span> <span class="k">false</span><span class="p">);</span>
+
+<span class="c1">// BashResult.Lines splits BashResult.Output by new-lines and stores the result as an array:</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">line</span> <span class="k">in</span> <span class="n">bash</span><span class="p">.</span><span class="nf">Ls</span><span class="p">(</span><span class="s">"-lhaF"</span><span class="p">).</span><span class="n">Lines</span><span class="p">)</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+
+<span class="c1">// Run custom commands using Bash.Command():</span>
+<span class="kt">var</span> <span class="n">libs</span> <span class="p">=</span> <span class="n">bash</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">"ldd /usr/bin/dotnet"</span><span class="p">).</span><span class="n">Lines</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"OS: </span><span class="p">{</span><span class="n">bash</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">"uname -s"</span><span class="p">).</span><span class="n">Output</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>Bash commands return an instance of <code class="highlighter-rouge">BashResult</code> that stores redirected output information in <code class="highlighter-rouge">BashResult.Output</code>, <code class="highlighter-rouge">BashResult.ErrorMsg</code>, <code class="highlighter-rouge">BashResult.ExitCode</code>, and <code class="highlighter-rouge">BashResult.Lines</code>. By default, all commands (except for <code class="highlighter-rouge">Bash.Echo()</code>) will redirect their output information. If a command is run with <code class="highlighter-rouge">redirect: false</code>, all properties in <code class="highlighter-rouge">BashResult</code> except for <code class="highlighter-rouge">BashResult.ExitCode</code> will be <code class="highlighter-rouge">null</code>.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Source Panel -->
+<div class="container-fluid" id="source">
+  <div class="container docs-panel">
+    <div class="row">
+
+      <div class="col-md-4">
+        <a href="https://github.com/phil-harmoniq/Shell.NET">
+          <img src="/assets/images/logos/github-white.svg" class="logo-img center-block" />
+        </a>
+      </div>
+      
+      <div class="col-md-4 vertical-center">
+        <div class="container card vertical-center">
+          <h3>If you'd like to dig deeper into the development of Shell.NET, all of our source
+          is available on Github. You can also see all of our build logs on Travis CI.</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://travis-ci.org/phil-harmoniq/Shell.NET">
+          <img src="/assets/images/logos/travis-rgb.svg" class="logo-img center-block" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer Panel -->
+<div class="container-fluid special-shadow super-hi-box">
+    <div class="container">
+    </div>
+  </div>
+<div class="container-fluid light-card super-hi-box">
+  <div class="container">
+    <div class="row well card footer-card" align="center">
+      
+        <a href="https://github.com/phil-harmoniq">
+          <img src="/assets/images/logos/github-black.svg" class="footer-icon" hspace="4" />
+        </a>
+      
+        
+      
+      <a href="https://travis-ci.org/phil-harmoniq">
+        <img src="/assets/images/logos/travis-ci-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      
+      
+      <a href="https://www.linkedin.com/in/phil-hawkins">
+        <img src="/assets/images/logos/linked-in-black.svg" class="footer-icon" hspace="4" />
+      </a>
+      
+      <div class="well card footer-card text-center">
+        <p>Copyright (c) 2017 - Phil Hawkins</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
