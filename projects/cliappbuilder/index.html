@@ -79,19 +79,19 @@
               
                 
                   <li>
-                    <a href="/projects/govlib/">GovLib</a>
-                  </li>
-                
-              
-                
-                  <li>
                     <a href="/projects/cliappbuilder/">CliAppBuilder</a>
                   </li>
                 
               
                 
                   <li>
-                    <a href="/projects/netpkg-tool/">netpkg-tool</a>
+                    <a href="/projects/GovLib/">GovLib</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/projects/arc-plus/">Arc+</a>
                   </li>
                 
               
@@ -103,7 +103,7 @@
               
                 
                   <li>
-                    <a href="/projects/arc-plus/">Arc+</a>
+                    <a href="/projects/netpkg-tool/">netpkg-tool</a>
                   </li>
                 
               
@@ -162,12 +162,16 @@
 
 <!-- Top Jumbotron -->
 <div class="jumbotron card dark-card">
-  <div class="jumbo-background text-center">
-    <div class="container main-title">
-      <h1>Simple CLI app creation for .NET Core</h1>
-      <br/><br/>
-      <p style="font-size: 1000%"><img style="height: 350px" src="/assets/images/logos/shell-white.svg" /></p>
-      <br/>
+  <div class="jumbo-background">
+    <div class="container main-title" style="padding-top: 30px; padding-bottom: 20px">
+      <div class="row">
+        <div class="col-md-6 vertical-center" style="padding-left: 100px">
+          <h1>A simple, yet flexible CLI creation library for .NET Core</h1>
+        </div>
+        <div class="col-md-6 text-center">
+          <p style="font-size: 1000%"><img style="height: 25pc" src="/assets/images/cliappbuilder/icon.svg" /></p>
+        </div>
+      </div>
       
     </div>
   </div>
@@ -178,7 +182,85 @@
   <div class="container readme-fit">
     <div class="row image-fit">
       
-      <p>#CliBuilder https://travis-ci.org/phil-harmoniq/CliBuilder.svg?branch=master</p>
+      <h1 id="cliappbuilder--">CliAppBuilder <a href="https://travis-ci.org/phil-harmoniq/CliAppBuilder"><img src="https://travis-ci.org/phil-harmoniq/CliAppBuilder.svg?branch=master" alt="Build Status" /></a> <a href="https://www.nuget.org/packages/CliAppBuilder"><img src="https://img.shields.io/nuget/v/CliAppBuilder.svg" alt="NuGet" /></a></h1>
+
+<p>Streamline the creation of CLI applications using helpful builder classes. CliAppBuilder is designed to be simple, yet flexible.</p>
+
+<h2 id="installing">Installing</h2>
+
+<p>Install using the .NET CLI or your IDE’s package manager:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package CliAppBuilder
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Begin by creating a <code class="highlighter-rouge">new CliBuilder()</code> and add your flags, values, and actions by using the included helper methods. There are additional methods for updating the meta-data of your application such as name, version, default actions, and more. Try exploring the API on <a href="https://www.fuget.org/packages/CliAppBuilder">FuGet</a>!</p>
+
+<p>Provide an anonymous function to a <code class="highlighter-rouge">new ActionBuilder()</code> to add functionality to your CLI application. The arguments provided to your function are:</p>
+
+<ol>
+  <li>The <code class="highlighter-rouge">ActionArg</code> that was called to provide the context for your application.</li>
+  <li>The additional arguments given to that action <em>after</em> parsing any detected special arguments.</li>
+</ol>
+
+<p>The provided <code class="highlighter-rouge">ActionArg</code> provides many properties storing meta-data for that action as well as a reference to the base <code class="highlighter-rouge">CliApp</code> for additional utility methods and properties.</p>
+
+<p>For more detailed instructions please visit the <a href="https://github.com/phil-harmoniq/CliAppBuilder/wiki">CliAppBuilder wiki</a>.</p>
+
+<h2 id="example">Example</h2>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">CliBuilder</span><span class="p">()</span>
+        <span class="p">.</span><span class="nf">SetName</span><span class="p">(</span><span class="s">"CliAppBuilder Example"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">SetWidth</span><span class="p">(</span><span class="m">72</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">AddActionArg</span><span class="p">(</span><span class="k">new</span> <span class="nf">ActionBuilder</span><span class="p">(</span><span class="s">"Print to the terminal"</span><span class="p">,</span> <span class="s">"print"</span><span class="p">,</span> <span class="n">PrintToTerminal</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">AddFlagArg</span><span class="p">(</span><span class="s">"Print with the color red"</span><span class="p">,</span> <span class="s">"--red"</span><span class="p">,</span> <span class="s">"-r"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">AddFlagArg</span><span class="p">(</span><span class="s">"Print with the color blue"</span><span class="p">,</span> <span class="s">"--blue"</span><span class="p">,</span> <span class="s">"-b"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">AddFlagArg</span><span class="p">(</span><span class="s">"Print with the color green"</span><span class="p">,</span> <span class="s">"--green"</span><span class="p">,</span> <span class="s">"-g"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">AddValueArg</span><span class="p">(</span><span class="s">"Log what you said in the given text file"</span><span class="p">,</span> <span class="s">"--log"</span><span class="p">,</span> <span class="s">"-l"</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">AddActionArg</span><span class="p">(</span><span class="k">new</span> <span class="nf">ActionBuilder</span><span class="p">(</span><span class="s">"List files in current directory"</span><span class="p">,</span> <span class="s">"list"</span><span class="p">,</span> <span class="n">ListFiles</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">AddFlagArg</span><span class="p">(</span><span class="s">"Show hidden files"</span><span class="p">,</span> <span class="s">"--hidden"</span><span class="p">,</span> <span class="s">"-h"</span><span class="p">))</span>
+        <span class="p">.</span><span class="nf">DontFailOnInvalidArg</span><span class="p">()</span>
+        <span class="p">.</span><span class="nf">Start</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Actions are anaonymous functions with the base ActionArg for context and an array of arguments</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">PrintToTerminal</span><span class="p">(</span><span class="n">ActionArg</span> <span class="n">action</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">redFlag</span> <span class="p">=</span> <span class="n">action</span><span class="p">.</span><span class="nf">GetFlag</span><span class="p">(</span><span class="s">"--red"</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">blueFlag</span> <span class="p">=</span> <span class="n">action</span><span class="p">.</span><span class="nf">GetFlag</span><span class="p">(</span><span class="s">"--blue"</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">greenFlag</span> <span class="p">=</span> <span class="n">action</span><span class="p">.</span><span class="nf">GetFlag</span><span class="p">(</span><span class="s">"--green"</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">logValue</span> <span class="p">=</span> <span class="n">action</span><span class="p">.</span><span class="nf">GetValue</span><span class="p">(</span><span class="s">"--log"</span><span class="p">);</span>
+    <span class="c1">// Implement your action here</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="k">void</span> <span class="nf">ListFiles</span><span class="p">(</span><span class="n">ActionArg</span> <span class="n">action</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">hiddenFlag</span> <span class="p">=</span> <span class="n">action</span><span class="p">.</span><span class="nf">GetFlag</span><span class="p">(</span><span class="s">"--hidden"</span><span class="p">);</span>
+    <span class="c1">// Implement your action here</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This is a shortened version of the <a href="https://github.com/phil-harmoniq/CliAppBuilder/blob/master/CliAppBuilder.Example/Program.cs"><code class="highlighter-rouge">CliAppBuilder.Example</code> app</a>. Go check it out for the full implementation.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>PRs, issue reports, and advice are always welcome! It is recommended you use VS Code to work with the CliAppBuilder source code. The workspace includes build tasks, editor settings, extension recommendations, and launch configurations to aid development in VS Code, but any editor that supports C# will do.</p>
+
+<p>Type Ctrl + Shift + B (or Cmd + Shift + B on Macs) to bring up the build tasks menu:</p>
+
+<p><img src="https://imgur.com/Fah7i33.jpg" alt="Tasks Menu" /></p>
+
+<h2 id="supporting-links">Supporting Links</h2>
+
+<ul>
+  <li>Check out the <a href="https://github.com/phil-harmoniq/CliAppBuilder/wiki">CliAppBuilder wiki</a> for more usage details</li>
+  <li>Check out some of my other projects on my <a href="http://phil-hawkins.me/">personal site</a></li>
+  <li>Icon made by <a href="http://www.freepik.com">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a></li>
+</ul>
 
     </div>
   </div>
