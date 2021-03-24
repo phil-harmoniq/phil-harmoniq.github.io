@@ -1,301 +1,86 @@
-body {
-    font-family: var(--main-font);
-    background-color: var(--jungle);
-    color: var(--platinum);
-    font-size: 15px;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    font-family: var(--main-font);
+.wrapper {
+    max-width: calc(1000px - (30px * 2))
 }
 
-.well {
-    background-color: transparent;
+.page-content.styled {
+    background-color: #e7e8eb;
+}
+
+.site-header {
+    background-color: #1c2321;
+}
+
+.site-footer {
+    background-color: #1c2321;
+}
+
+.footer-col-wrapper {
+    color: #e7e8eb !important;
+}
+
+a.page-link {
+    color: #e7e8eb !important;
+}
+
+a.site-title {
+    color: #e7e8eb !important;
+}
+
+a.dark-button {
+    color: #e7e8eb;
+    background-color: #1c2321;
+    border-radius: 5%;
+    padding: 5px;
+    margin: 50px !important;
+}
+
+a.dark-button:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #a5a5a5;
+}
+
+a.dark-button:active {
+    color: #e7e8eb;
+    background-color: #1c2321;
+}
+
+.columns-2 {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.columns-3 {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+.resume-frame {
+    padding: 10px;
+}
+
+.no-border {
+    vertical-align: top;
     border: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
 }
 
-.carousel-control.left, .carousel-control.right {
-    background-image:none !important;
-    filter:none !important;
-}
-
-.super-hi-box {
-    z-index: 2;
-    position: relative;
-}
-
-.hi-box {
-    z-index: 2;
-    position: relative;
-}
-
-.low-box {
-    z-index: -1;
-    position: relative;
-}
-
-.card {
-    border-radius: 0px !important;
-    border: 0px !important;
-}
-
-.container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
-}
-
-.shadow {
-}
-
-.about-style {
-    font-family: sans-serif !important;
-}
-
-.special-shadow {
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-}
-
-.light-shadow {
-    -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.6);
-    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.6);
-}
-
-.dark-card {
-    background-color: var(--jungle);
-    color: var(--platinum);
-}
-
-.glyph-style:link {
-    opacity: 1 !important;
-    color: var(--jungle);
-}
-
-.glyph-style:hover {
-    color: var(--silver-sand);
-}
-
-.glyph-style:active {
-    color: var(--silver-sand);
-}
-
-.silver-card {
-    background-color: var(--silver-sand);
-    color: var(--jungle);
-}
-
-.pale-card {
-    background-color: var(--pale-aqua);
-    color: var(--jungle);
-}
-
-.light-card {
-    background-color: var(--platinum);
-    color: var(--jungle);
-}
-
-.green-card {
-    background-color: var(--rich-green);
-    color: var(--platinum);
-}
-
-.cyan-card {
-    background-color: var(--green-cyan);
-    color: var(--jungle);
-}
-
-.purple-card {
-    background-color: var(--vs-purple);
-    color: var(--platinum);
-}
-
-.onyx-card {
-    background-color: var(--onyx);
-    color: var(--platinum);
-}
-
-.python-card {
-    background-color: var(--python-blue);
-    color: var(--platinum);
-}
-
-.dull-purple-card {
-    background-color: var(--dull-purple);
-    color: var(--jungle);
-}
-
-.blue-card {
-    background-color: var(--midnight-blue);
-    color: var(--platinum);
-}
-
-.brown-card {
-    background-color: var(--brown-bean);
-    color: var(--platinum);
-}
-
-a.dark-btn {
-    background-color: var(--jungle);
-    color: var(--platinum) !important;
-    text-decoration: none !important;
-}
-
-a:visited.dark-btn {
-    color: var(--platinum) !important;
-}
-
-a:hover.dark-btn{
-    background-color: var(--silver-sand);
-    color: var(--jungle) !important;
-}
-
-.post-time {
-    font-size: 12px;
-    font-style: italic;
-}
-
-.footer-icon {
-    width: 48px;
-}
-
-.avatar {
-    width: 100%;
-}
-
-#error h1 {
-    font-size: 48px;
-}
-
-#error p {
-    font-size: 24px;
-}
-
-#main-content {
-    padding-top: 50px;
-}
-
-.main-well {
-    height: 512px;
-}
-
-.main-img {
-    width: auto;
-    height: auto;
-}
-
-.entry > p img {
-    width: 100%;
-}
-
-.vertical-center {
-    display: flex;
-    align-items: center;
-}
-
-.jumbotron {
-    padding-top: 70px;
-    padding-bottom: 0px;
-}
-
-.carousel-control .glyphicon,
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-}
-
-.indi {
-    background-color: var(--jungle) !important;
-    border-color: var(--jungle);
-    border: 0px !important;
-    
-}
-.indi:hover {
-    background-color: var(--silver-sand) !important;
-}
-.indi:active {
-    background-color: var(--silver-sand) !important;
-}
-
-.extra-pad {
-    padding-top: 15px;
-}
-
-hr {
-    background-color: var(--jungle) !important;
-    color: var(--jungle) !important;
-    height: 2px !important;
-}
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-[data-text] {
-    color: var(--platinum);
-}
-
-[data-text]::after {
-    content: attr(data-text);
-}
-
-.image-fit p img {
-    max-width:100%;
-    max-height:100%;
-}
-
-.readme-fit {
-    max-width: 75%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-:root {
-    /* Primary palette: Smooth */
-    --eerie-black: rgb(23, 25, 25);
-    --jungle: #1C2321;
-    --onyx: rgba(53, 57, 59, 1);
-    --silver-sand: rgba(179, 192, 199, 1);
-    --pale-aqua: #BBD5ED;
-    --platinum: #E7E8EB;
-    --rich-green: rgb(6, 48, 60);
-    --dull-purple: rgb(86, 63, 123);
-    --vs-purple: rgb(104, 38, 121);
-    --topaz: #932800;
-    --raspberry: rgb(150, 15, 54);
-    --chocolate: rgb(137, 68, 0);
-    --brown-bean: rgb(60, 30, 0);
-    --army-green: rgb(86, 80, 9);
-    --gamboge-brown: #936D00;
-    --citrine: rgb(213, 199, 11);
-    --green-cyan: rgb(0, 150, 99);
-    --viridian-green: rgb(5, 160, 153);
-    --cerulean: rgb(0, 164, 213);
-    --sea-blue: rgb(0, 105, 137);
-    --deep-sea-blue: rgb(0, 85, 111);
-    --python-blue: rgb(58, 118, 170);
-    --electric-blue: rgb(5, 81, 160);
-    --midnight-blue: #04395E;
-    --imperial-blue: rgb(5, 36, 150);
-    --oxford-blue: rgb(3, 21, 86);
-
-    --main-font: "Ubuntu";
+@media print
+{
+    .site-header {
+        display: none !important;
+    }
+    .site-title {
+        display: none !important;
+    }
+    .page-content {
+        padding: 0px;
+    }
+    .site-footer {
+        display: none !important;
+    }
+    .dark-button {
+        display: none !important;
+    }
 }
