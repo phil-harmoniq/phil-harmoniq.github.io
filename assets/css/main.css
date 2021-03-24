@@ -45,6 +45,27 @@ a.dark-button:active {
     background-color: #1c2321;
 }
 
+.columns-2 {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.columns-3 {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+.resume-frame {
+    padding: 10px;
+}
+
+.no-border {
+    vertical-align: top;
+    border: 0;
+}
+
 @media print
 {
     .site-header {
