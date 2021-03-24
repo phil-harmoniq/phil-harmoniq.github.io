@@ -1,23 +1,46 @@
 .wrapper {
-    max-width: calc(900px - (30px * 2))
+    max-width: calc(1000px - (30px * 2))
+}
+
+.page-content.styled {
+    background-color: #e7e8eb;
 }
 
 .site-header {
-    background-color: #1b1b1b;
+    background-color: #1c2321;
 }
 
 .site-footer {
-    background-color: #1b1b1b;
+    background-color: #1c2321;
 }
 
 .footer-col-wrapper {
-    color: white !important;
+    color: #e7e8eb !important;
 }
 
 a.page-link {
-    color: white !important;
+    color: #e7e8eb !important;
 }
 
 a.site-title {
-    color: white !important;
+    color: #e7e8eb !important;
+}
+
+a.dark-button {
+    color: #e7e8eb;
+    background-color: #1c2321;
+    border-radius: 5%;
+    padding: 5px;
+    margin: 50px !important;
+}
+
+a.dark-button:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #a5a5a5;
+}
+
+a.dark-button:active {
+    color: #e7e8eb;
+    background-color: #1c2321;
 }
