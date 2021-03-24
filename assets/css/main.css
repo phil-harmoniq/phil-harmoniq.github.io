@@ -44,3 +44,22 @@ a.dark-button:active {
     color: #e7e8eb;
     background-color: #1c2321;
 }
+
+@media print
+{
+    .site-header {
+        display: none !important;
+    }
+    .site-title {
+        display: none !important;
+    }
+    .page-content {
+        padding: 0px;
+    }
+    .site-footer {
+        display: none !important;
+    }
+    .dark-button {
+        display: none !important;
+    }
+}
