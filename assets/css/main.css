@@ -66,6 +66,11 @@ a.dark-button:active {
     border: 0;
 }
 
+table.no-border {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
 @media print
 {
     .site-header {
@@ -81,6 +86,9 @@ a.dark-button:active {
         display: none !important;
     }
     .dark-button {
+        display: none !important;
+    }
+    .print-hide {
         display: none !important;
     }
 }
