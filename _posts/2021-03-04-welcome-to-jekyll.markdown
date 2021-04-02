@@ -14,12 +14,37 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+namespace TestApp
+{
+    class Program
+    {
+        private readonly bool _isTrue = true;
+        public static string Message { get; set; }
+
+        static void Main(string[] args)
+        {
+            var obj = new DomainObject
+            {
+                IsActive = false,
+                Users = new List<int> { 6, -2, 5, 1 }
+            };
+            Message = $"Message of the day: {Message}";
+            Console.WriteLine(Message);
+        }
+    }
+
+    class DomainObject
+    {
+        public bool IsActive { get; set; }
+        public IList<int> Users { get; set; }
+    }
+}
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
