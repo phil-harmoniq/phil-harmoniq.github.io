@@ -25,13 +25,17 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philhawkins.dev" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  phil-harmoniq
+github_username: phil-harmoniq
 linkedin_username: phil-hawkins
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+header_pages:
+  - resume.html
+  - blog.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.

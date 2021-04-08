@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2021-03-04 19:55:29 -0500
-categories: jekyll update
+categories: blog
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -34,8 +34,8 @@ namespace TestApp
                 IsActive = false,
                 Users = new List<int> { 6, -2, 5, 1 }
             };
-            Message = $"Message of the day: {Message}";
-            Console.WriteLine(Message);
+            Message = $"Hello, world!";
+            Console.WriteLine($"Message of the day: {Message}");
         }
     }
 
