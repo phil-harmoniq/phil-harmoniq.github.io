@@ -1,7 +1,3 @@
-body { 
-    background-color: #1c2321;
-}
-
 .wrapper {
     max-width: calc(1000px - (30px * 2))
 }
@@ -95,6 +91,10 @@ header.site-header {
     top: 0;
     width: 100%;
     border-bottom: 1px solid #0b0e0d;
+}
+
+footer.site-footer {
+    border-top: 1px solid #0b0e0d;
 }
 
 main.page-content {
