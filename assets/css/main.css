@@ -1,3 +1,7 @@
+body { 
+    background-color: #1c2321;
+}
+
 .wrapper {
     max-width: calc(1000px - (30px * 2))
 }
@@ -94,13 +98,13 @@ header.site-header {
 }
 
 main.page-content {
-    margin-top: 56px;
+    padding-top: 86px;
 }
 
 @media print
 {
     main.page-content {
-        margin-top: 0px;
+        padding-top: 0px;
     }
 
     .site-header {
