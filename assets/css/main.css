@@ -71,8 +71,38 @@ table.no-border {
     padding-bottom: 0px !important;
 }
 
+header.site-header {
+    border-top: 0px;
+}
+
+svg.header-icon {
+    vertical-align: -6px;
+    height: 26px;
+    width: 26px;
+}
+
+.icon--linkedin {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+header.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #0b0e0d;
+}
+
+main.page-content {
+    margin-top: 56px;
+}
+
 @media print
 {
+    main.page-content {
+        margin-top: 0px;
+    }
+
     .site-header {
         display: none !important;
     }

@@ -7,6 +7,7 @@ code {
     background-color: #1c2321;
     color: #99D7F9;
     font-family: "Ubuntu Mono";
+    line-height: 1 !important;
 }
 
 code span {
