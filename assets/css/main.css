@@ -95,6 +95,7 @@ header.site-header {
     top: 0;
     width: 100%;
     border-bottom: 1px solid #0b0e0d;
+    z-index: 1;
 }
 
 footer.site-footer {
