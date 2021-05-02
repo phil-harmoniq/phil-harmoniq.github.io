@@ -105,6 +105,10 @@ main.page-content {
     padding-top: 86px;
 }
 
+.utterances {
+    max-width: 100%;
+}
+
 @media print
 {
     main.page-content {
