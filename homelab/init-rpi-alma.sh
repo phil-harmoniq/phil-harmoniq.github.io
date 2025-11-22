@@ -34,8 +34,8 @@ install_packages()
 {
     echo "Installing default environment packages"
 
-    dnf install epel-release -y
-    dnf install \
+    sudo dnf install epel-release -y
+    sudo dnf install \
         podman \
         git \
         btop \
@@ -55,12 +55,12 @@ install_packages()
 
 enable_services()
 {
-    systemctl enable --now cockpit
+    sudo systemctl enable --now cockpit
 }
 
 configure_podman()
 {
-    loginctl enable-linger devops
+    sudo loginctl enable-linger devops
 }
 
 main
