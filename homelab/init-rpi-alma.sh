@@ -7,8 +7,8 @@ base_url="https://raw.githubusercontent.com/phil-harmoniq/hosts/refs/heads/main/
 main()
 {
     add_shell_config
-    # install_packages
-    # enable_services
+    install_packages
+    enable_services
     configure_podman
 }
 
