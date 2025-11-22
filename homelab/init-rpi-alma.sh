@@ -22,13 +22,12 @@ add_shell_config()
     curl "$base_url/shell/.bashrc.d/aliases" > "$tmp_dir/shell/.bashrc.d/aliases"
     curl "$base_url/shell/.bashrc.d/prompt" > "$tmp_dir/shell/.bashrc.d/prompt"
     curl "$base_url/shell/.inputrc" > "$tmp_dir/shell/.inputrc"
-    ls -lhaF "$tmp_dir/shell"
-    # DEST_BASH_CONFIG_DIR="$HOME/.bashrc.d/"
 
-    # mkdir -p "$DEST_BASH_CONFIG_DIR"
-    # cp "$SOURCE_BASH_CONFIG_DIR/aliases" "$DEST_BASH_CONFIG_DIR"
-    # cp "$SOURCE_BASH_CONFIG_DIR/prompt" "$DEST_BASH_CONFIG_DIR"
-    # cp "$script_dir/.inputrc" "$HOME"
+    echo "Adding shell config to current user"
+    mkdir -p "$HOME/.bashrc.d/"
+    cp "$tmp_dir/shell/.bashrc.d/aliases" "$DEST_BASH_CONFIG_DIR"
+    cp "$tmp_dir/shell/.bashrc.d/prompt" "$DEST_BASH_CONFIG_DIR"
+    cp "$tmp_dir/shell/.inputrc" "$HOME"
 }
 
 install_packages()
