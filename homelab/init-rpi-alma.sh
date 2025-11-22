@@ -25,8 +25,8 @@ add_shell_config()
 
     echo "Adding shell config to current user"
     mkdir -p "$HOME/.bashrc.d/"
-    cp "$tmp_dir/shell/.bashrc.d/aliases" "$DEST_BASH_CONFIG_DIR"
-    cp "$tmp_dir/shell/.bashrc.d/prompt" "$DEST_BASH_CONFIG_DIR"
+    cp "$tmp_dir/shell/.bashrc.d/aliases" "$HOME/.bashrc.d"
+    cp "$tmp_dir/shell/.bashrc.d/prompt" "$HOME/.bashrc.d"
     cp "$tmp_dir/shell/.inputrc" "$HOME"
 }
 
