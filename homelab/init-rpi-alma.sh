@@ -32,6 +32,8 @@ add_shell_config()
 
 install_packages()
 {
+    echo "Installing default environment packages"
+
     dnf install epel-release -y
     dnf install \
         podman \
@@ -47,6 +49,7 @@ install_packages()
         samba \
         samba-client \
         cifs-utils \
+        nfs-utils \
         -y
 }
 
