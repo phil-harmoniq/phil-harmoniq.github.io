@@ -10,6 +10,7 @@ main()
     install_packages
     enable_services
     configure_podman
+    configure_git
 }
 
 add_shell_config()
@@ -50,17 +51,28 @@ install_packages()
         samba-client \
         cifs-utils \
         nfs-utils \
+        pcp \
+        python3-pcp \
+        wget \
+        file \
         -y
 }
 
 enable_services()
 {
     sudo systemctl enable --now cockpit
+    sudo systemctl enable --now pmlogger
 }
 
 configure_podman()
 {
     sudo loginctl enable-linger devops
+}
+
+configure_git()
+{
+    git config --global user.email "philhawkins.dev@gmail.com"
+    git config --global user.name "Phil Hawkins"
 }
 
 main
